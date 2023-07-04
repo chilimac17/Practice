@@ -1,0 +1,6 @@
+Future Projects
+-Your digital portfolio
+-A digital calculator with a GUI 
+-COVID-19 dashboard (showing the stats state-wise)
+-An application that shows the menu of a restaurant and lets customers to place orders 
+-Digital photo album (you can create your own album and add images to it)

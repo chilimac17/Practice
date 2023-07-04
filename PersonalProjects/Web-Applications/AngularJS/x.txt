@@ -1,0 +1,60 @@
+Angularjs,mongodb
+
+Creating textbox and buttons 
+
+
+<input type="text" placeholder="Username" ng-model="$crlt.user1" >
+<intput type="email" placeholder="Email" ng-model="$crlt.email1">
+<input type="password" placeholder="Password" ng-model="$crlt.pass1">
+<button type="submit" ng-click = "$crlt.submit()">Submit</button>
+
+Save to object
+hash the password
+var account = {
+		"username": user1(crlt.user1),
+		"email": email1,
+		"password": pass1
+			
+			};
+
+create 3 functions
+(name of function replaces function)
+function(){
+	
+};
+
+searchAccount(){
+var checkProfile = {
+			"username": user2,
+			"email" : email2
+		    };
+*call search function on back end* 
+
+};
+
+
+print object to make sure it is set up correctly
+
+console.log(account);
+
+add account to database
+mongo.db.insert(object)
+	.find()
+
+use search ability to find username/email in database
+
+print that the account was found 
+
+
+create function to check the password 
+
+print that the password checks out/make message appear that you logged in 
+
+
+
+<input type="email" ng-model="field" name="myField" required maxlength="15" />
+  </label>
+  <div ng-messages="myForm.myField.$error" role="alert">
+    <div ng-message="required">Please enter a value for this field.</div>
+    <div ng-message="email">This field must be a valid email address.</div>
+    <div ng-message="maxlength">This field can be at most 15 characters long.</div>
