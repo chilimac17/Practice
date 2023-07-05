@@ -1,0 +1,14 @@
+import java.util.*;
+public class PrimeGenerator {
+   public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       System.out.print("Enter prime number P: ");
+       int p = sc.nextInt();
+       System.out.println("All Generator of group are = \n");
+       int k = 1;
+       while(k < p) {
+           System.out.println(k);
+           k++;
+       }
+   }
+}
