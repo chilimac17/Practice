@@ -1,0 +1,53 @@
+GNU gdb (Ubuntu 12.1-0ubuntu1~22.04) 12.1
+Copyright (C) 2022 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from NUASystem...
+(No debugging symbols found in NUASystem)
+[?2004h(gdb) r
+[?2004lStarting program: /home/chillpill17/Code/C++/Schoolwork/Stevens/Summer2023/CS_590_Algorthms/NUA_Upgrade_System_Chillemi/NUASystem 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+Constructing Max Heap
+STATUS = 2 CN = 1
+Constructing Max Heap PT 2
+STATUS = 3 CN = 5
+STATUS = 2 CN = 1
+
+Program received signal SIGABRT, Aborted.
+__pthread_kill_implementation (no_tid=0, signo=6, threadid=140737352681280) at ./nptl/pthread_kill.c:44
+[?2004h[?2004l[?2004h(gdb) bt
+[?2004l#0  __pthread_kill_implementation (no_tid=0, signo=6, threadid=140737352681280) at ./nptl/pthread_kill.c:44
+#1  __pthread_kill_internal (signo=6, threadid=140737352681280) at ./nptl/pthread_kill.c:78
+#2  __GI___pthread_kill (threadid=140737352681280, signo=signo@entry=6) at ./nptl/pthread_kill.c:89
+#3  0x00007ffff7842476 in __GI_raise (sig=sig@entry=6) at ../sysdeps/posix/raise.c:26
+#4  0x00007ffff78287f3 in __GI_abort () at ./stdlib/abort.c:79
+#5  0x00007ffff78896f6 in __libc_message (action=action@entry=do_abort, fmt=fmt@entry=0x7ffff79dbb8c "%s\n") at ../sysdeps/posix/libc_fatal.c:155
+#6  0x00007ffff78a0d7c in malloc_printerr (str=str@entry=0x7ffff79de7b0 "double free or corruption (out)") at ./malloc/malloc.c:5664
+#7  0x00007ffff78a2ef0 in _int_free (av=0x7ffff7a19c80 <main_arena>, p=0x555555570fa0, have_lock=<optimized out>) at ./malloc/malloc.c:4588
+#8  0x00007ffff78a54d3 in __GI___libc_free (mem=<optimized out>) at ./malloc/malloc.c:3391
+#9  0x0000555555558b17 in __gnu_cxx::new_allocator<NewUnknownAirlineUpgradeSystem::FrequentFlyer>::deallocate(NewUnknownAirlineUpgradeSystem::FrequentFlyer*, unsigned long) ()
+#10 0x0000555555558418 in std::allocator_traits<std::allocator<NewUnknownAirlineUpgradeSystem::FrequentFlyer> >::deallocate(std::allocator<NewUnknownAirlineUpgradeSystem::FrequentFlyer>&, NewUnknownAirlineUpgradeSystem::FrequentFlyer*, unsigned long) ()
+#11 0x0000555555557b9a in std::_Vector_base<NewUnknownAirlineUpgradeSystem::FrequentFlyer, std::allocator<NewUnknownAirlineUpgradeSystem::FrequentFlyer> >::_M_deallocate(NewUnknownAirlineUpgradeSystem::FrequentFlyer*, unsigned long) ()
+#12 0x00005555555574df in std::_Vector_base<NewUnknownAirlineUpgradeSystem::FrequentFlyer, std::allocator<NewUnknownAirlineUpgradeSystem::FrequentFlyer> >::~_Vector_base() ()
+#13 0x0000555555557533 in std::vector<NewUnknownAirlineUpgradeSystem::FrequentFlyer, std::allocator<NewUnknownAirlineUpgradeSystem::FrequentFlyer> >::~vector() ()
+#14 0x00005555555573ea in NewUnknownAirlineUpgradeSystem::NUASystem::~NUASystem() ()
+#15 0x0000555555556f50 in main ()
+[?2004h(gdb) q
+[?2004l[?2004hA debugging session is active.
+
+	Inferior 1 [process 5784] will be killed.
+
+Quit anyway? (y or n) y
+[?2004l

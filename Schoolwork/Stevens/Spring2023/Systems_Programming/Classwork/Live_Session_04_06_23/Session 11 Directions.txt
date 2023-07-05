@@ -1,0 +1,70 @@
+Using Pipes in the shell:
+
+- type in the following commands as you see them at the $>
+
+1. $> mkfifo /tmp/fifo1
+2. $> file /tmp/fifo1
+3. $> ls -l 
+	- note the attributes
+4. $> uptime -p > /tmp/fifo1
+	- nothing happens - it is blocked
+	- this means nothing is available to receive the message sent
+	- keep this terminal open
+	- open a new terminal
+	- uptime is the length of time the system has been running
+
+5. $> cat < /tmp/fifo1
+	- message is displayed
+
+
+
+
+
+Shared Memory
+
+1) unrelated processes
+
+	a. open shmWriter.c and review code
+		1. make executable
+		2. do not run yet
+	
+	b. open shmReader.c and review code
+		1. make executable
+
+IF YOU GET COMPILATION ERRORS, TRY THIS:
+
+	gcc -Wall -Wextra -pedantic -std=gnu11 filename.c -o filename -lrt
+
+
+	-NOTE:  this will use the gnu11 compiler (this is the number 11)
+		
+
+	c. $> ./shmWriter
+		- do not press Enter yet
+		- open a new terminal
+
+	d. $> ./shmReader
+		- you should see the 3 floating-point numbers that
+		  were stored in shmWriter.c
+
+Each process was allowed to share memory space.
+
+
+
+
+
+Exercise
+
+Complete the fix.c program that will execute a loop five times:
+
+	- create a message queue using msgget
+	- print the queue identifier
+	- delete the message queue
+
+Get this working first.
+Then execute another loop 5 times:
+	
+	- create a message queue
+	- place a message on the queue
+
+View the messages 

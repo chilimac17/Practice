@@ -1,0 +1,76 @@
+Compilation process:
+
+1. Open and review:
+
+	cubeDriver.c
+	cubeFunc.c
+	cube.h
+
+2. Compilation of multiple programs
+
+	a. do not include .h file.  It's already included in the #include
+
+	$> gcc -Wall -Wextra -pedantic -std=c99 \
+	      cubeDriver.c cubeFunc.c -o cube
+
+	b. execute
+
+	$> ./cube
+	$> echo $?
+
+
+3. Preprocessor
+
+	- places contents of #include into the file itself
+	- the -E option forces GCC to stop after preprocessing the files
+	- the -P option requests the preprocessor not to include line markers
+
+	$> gcc -E -P cubeDriver.c -o cubeDriver.i
+	$> gcc -E -P cubeFunc.c -o cubeFunc.i
+
+
+	-Let's look at the .i files
+
+	$> cat cubeDriver.i
+	$> cat cubeFunc.i
+
+
+4. Compilation
+
+	- translates into assembly language
+	- the -S option tells GCC to stop once the compilation is complete
+
+	$> gcc -S cubeDriver.i -o cubeDriver.s
+	$> gcc -S cubeFunc.i -o cubeFunc.s
+
+
+	$> cat cubeDriver.s
+	$> cat cubeFunc.s
+
+
+5. Assembly
+
+	- builds object files (binary files)
+	- the -c tells GCC to stop after the assembly stage is complete
+
+	$> gcc -c cubeDriver.s -o cubeDriver.o
+	$> gcc -c cubeFunc.s -o cubeFunc.o
+
+	$> file cubeDriver.o
+	$> file cubeFunc.o
+
+
+6. Linker
+
+	- combine all object files into a single binary file
+
+	$> gcc cubeDriver.o cubeFunc.o -o cube
+
+	$> file cube
+
+	$> ./cube 
+	$> echo $?
+
+
+--->  .c -> .i -> .s -> .o -> executable
+

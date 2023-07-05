@@ -1,0 +1,143 @@
+Directions
+
+1.  open mphTokph.c
+    a. what does strspn do?
+        - looks for sub string and returns index of first instance 
+    b. run the following tests in the terminal:
+        > 50
+        > 60
+        > 100
+        > -55
+        > hello
+    c. what output did you get?
+    - 50
+    - 80.5
+    - 60
+    - 96.6
+    - 100
+    - 160.9
+    - -55
+    - -88.5
+    - hello
+    - Found non-numeric value
+
+2.  open avg.txt and review 
+    a. filter out numeric values in avg.txt using
+        > cat avg.txt | awk '{ print $3 }'
+
+        1. what does awk do?
+            - pattern scanning and processing language
+        2. what does '{ print $3 }' do?
+            - print the third argument
+
+    b. now apply the input file as input for mphTokph using
+        > cat avg.txt | awk '{ print $3 }' | ./mphTokph
+        - 98.2
+        - 88.5
+        - 86.9
+        - 83.7
+        - 83.7
+        - Found non-numeric value
+
+
+    c. fix the output so the error output does not show
+        > (cat avg.txt | awk '{ print $3 }' | ./mphTokph) 2> /dev/null
+        //2> = error stream
+        //1> stdout 
+        //0> stdin
+        - 98.2
+        - 88.5
+        - 86.9
+        - 83.7
+        - 83.7
+
+
+        1. what is 2> /dev/null doing?
+            - this will output the error message to /dev/null dir
+        2. does the output show any error messages?
+            - Now it does not 
+
+    d. now add "km/h" to the output for each returned value using
+        > (cat avg.txt | awk '{ print $3 }' | ./mphTokph) 2> /dev/null | sed 's/$/ km\/h/'
+            - 98.2 km/h
+            - 88.5 km/h
+            - 86.9 km/h
+            - 83.7 km/h
+            - 83.7 km/h
+
+        1. describe what the sed command is doing.
+            - sed is adding the km/h after every output 
+
+3. open mphTokph2.c and review
+    a. insert code where directed
+    b. what does getopt() do?
+        - 
+    c. run the following tests in the terminal
+        > 60
+        > 40
+        > -55
+        > hello
+
+        - 60
+        - 40
+        - -55
+        - hello
+        - 96.6
+        - 64.4
+        - -88.5
+        - Found non-numeric value
+
+
+    d. use the -c option to continue running the program when an error is found using
+        > ./mphTokph2 -c
+        > 50
+        > 90
+        > hello
+        > -10
+        > 20
+
+        - 
+
+
+
+    e. open avg2.txt and review (keep the bad data as shown)
+        1. run the program using
+            > cat avg2.txt | awk '{ print $3 }'
+
+        - 61
+        - 55
+        - 54
+        - 52
+        - 52
+        - nn
+        - 49
+        - 47
+        - nn
+        - data
+        - 43
+
+    f. run the program mphTokph2 with the file using
+        > cat avg2.txt | awk '{ print $3 }' | ./mphTokph2 -c
+
+        1. what is the output?
+
+    g. write good output to the output.txt file and all errors to the error.txt file
+        > (cat avg2.txt | awk '{ print $3 }' | ./mphTokph2 -c) 2> errors.txt 1> output.txt
+
+        1. what is stored in output.txt (cat output.txt)?
+        2. what is stored in error.txt (cat error.txt)?
+
+4. open enviroVar.c
+    a. run the program
+        1. what output do you get?
+
+    b. run
+        > echo $USER
+        > echo $HOME
+        > echo $SHELL
+
+5. In a C program, what do setenv() and getenv() do?  
+    1. Try:
+
+         setenv("FULLNAME", "your name here", 1);
+         printf("Your name is %s\n", getenv("FULLNAME"));

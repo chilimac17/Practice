@@ -1,0 +1,25 @@
+1.   Write a C program that read the input file and display the following information:
+
+- the number of uppercase characters
+- the number of vowels (a, e, i, o, and u)
+- the number of digits
+
+
+Example:
+
+If the input file contained the following paragraph from 'War and Peace':
+
+First of all, dear friend, tell me how you are. Set your friend's mind at rest,” said he without altering his tone, beneath the politeness and affected sympathy of which indifference and even irony could be discerned.
+
+The output:  (values are not accurate)
+
+The number of uppercase characters is: 2
+The number of vowels is: 22
+The number of digits is: 0
+
+Extra challenge:
+
+-Count the number of spaces
+-Count the number of punctuation marks
+
+

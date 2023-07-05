@@ -1,0 +1,290 @@
+Session 13 Directions
+
+In this session, we will compare and contrast between static and dynamic libraries.
+
+There are 6 parts to this session:
+
+1) creating a static library
+2) using a static library
+3) creating a dynamic library
+4) installing the dynamic library 
+5) using the dynamic library
+6) compare size between the use of static and dynamic libraries
+
+*** To begin ****
+
+	a) create a new directory for this session  
+
+		$> mkdir directorynamehere
+
+	b) change to this new directory:
+
+		$> cd directorynamehere
+
+
+NOTE:  if you are curious about some of the commands you'll be using, remember the manual:  
+		$> man l commandhere  (example:   man l ar)
+
+
+1) Creating a static library
+
+	- A static library is included in the binary compiler and is a bit easier to use than a dynamic library.  
+	- The binary is independent of the library once its compiled.
+
+
+
+Steps:
+
+	a) open and review convert.c
+	   save the file but do not build the executable
+
+		NOTE: this file contains two function definitions:  
+			1) convert Celsius to Fahrenheit, and 2) convert Celsius to Kelvin
+
+	b) open and review convert.h
+	   save the file but do not build the executable
+
+		NOTE: this file contains the prototypes for the two functions found in convert.c
+
+	c) the first task is to create a library to compile the convert.c file into an object file.
+	   this is done by passing the -c option to GCC:
+
+		$> gcc -Wall -Wextra -pedantic -std=c99 -c convert.c
+
+	d) check the directory for a file named convert.o 
+
+		$> file convert.o
+
+		Returned value:
+			convert.o: ELF 64-bit LSB relocatable, x86-64, version 1 (SYSV), not stripped
+
+	   - this is the newly created object file
+	   - you should see this is an ELF file (Executable and Linkable Format)
+	   - not stripped means the symbols are still in the file
+	   - symbols expose the functions so programs can access and use them (more on this later)
+
+	e) the last task in creating a static library is to pack it in an archive file with the ar command.
+	   the -c option = creating the archive
+	   the -v option = verbose output  (see relevant messages displayed)
+	   the -r option = replace members with the same name
+
+	   when you create a library, the general rule for naming conventions:
+		begin with the letters:  lib
+		next add the name of the file:  convert
+		end with .a
+
+		library name = libconvert.a
+
+	 	$> ar -cvr libconvert.a convert.o
+
+		Returned value:  a - convert.o
+
+	f) Look at the static library you just created:
+
+		$> nm libconvert.a
+
+		Returned value:  convert.o
+				 0000000000000000 T c_to_f
+				 0000000000000037 T c_to_k
+
+
+
+2) Using a static library
+
+	a) open and review temperature.c
+	b) save and build the executable file
+
+	   $> gcc -Wall -Wextra -pedantic -std=c99 temperature.c libconvert.a -o temperature
+
+	c) this program takes two arguments:  -f or -k (Fahrenheit and Kelvin) along with a floating point value
+
+	d) test the program:
+
+	   $> ./temperature -f 30	
+	   $> ./temperature -k 15
+
+	e) take a look at the resulting temperature binary:
+
+	   $> nm temperature
+
+	NOTE:  you can see the functions used in the binary:  c_to_f, c_to_k, printUsage, and main (notice these are T functions)
+	       you can also see functions from the dynamic library such as printf (notice the U functions)
+
+	 	these are called symbols.
+
+		You can strip these symbols since they are not needed in this standalone program.  The
+		advantage of stripping symbols is it makes the programs smaller in size.
+
+	  $> strip temperature
+	  $> nm temperature
+
+		you should see:   nm: temperature: no symbols
+
+	f) we can see if a program or library is stripped.  We never strip static libraries, but we can strip programs.
+	   if a library is stripped, the linker wouldn't be able to find the needed functions and the linking process would fail.
+
+	  $> file temperature
+
+	  $> file convert.o	
+
+
+3) Creating a dynamic library
+
+	- dynamic libraries are more common
+	- easily distribute code for other developers to use
+
+	a) remove the previous object file and static library in the working directory 
+	   to ensure we use the correct dynamic file and library
+
+	   $> rm convert.o libconvert.a
+
+
+	b) create a new object file from the c file.  Remember, the -c option creates an object file, not the
+	   final binary file.
+
+	   the -fPIC option tells GCC to create Position-Independent Code (PIC) allowing the code to execute at
+	   different memory addresses in different processes.
+
+	   $> gcc -Wall -Wextra -pedantic -std=c99 -c -fPIC convert.c
+
+	   $> file convert.o
+
+		result:  convert.o: ELF 64-bit LSB relocatable, x86-64, version 1 (SYSV), not stripped
+
+	
+	c) create a .so file (shared object) using GCC.
+
+		- the -shared option creates a shared object
+		- the -Wl option passes all options separated by commas to the linker (Wl are characters)
+
+		- the option passed to the linker is -soname with the argument libconvert.so
+		  this sets the name of the dynamic library to libconvert.so
+		- soname = shared object name which is an internal name of the library.  This
+		  is the name that is used when referring to the library  soname = libconvert
+
+		- the -o option specifies the name of the output file
+		- notice there are no spaces between the options.  It is one argument separated by commas
+		- the linker sees it as -soname libconvert.so
+
+		- libconvert.so.1 broken down:
+			- lib (short for library)
+			- convert (name of the library)
+			- .so (the extension, shared object)
+			- .1 (the major version of the library - a digit)
+			- .3 (the minor version of the library - optional)
+
+	   $> gcc -shared -Wl,-soname,libconvert.so -o libconvert.so.1 convert.o
+
+
+	d) List the symbols that this shared library provides:
+
+	   $> nm -D libconvert.so.1
+
+		result:
+
+			000000000000010f5 T c_to_f
+			0000000000000112c T c_to_k
+					  w __cxa_finalize
+					  w __gmon_start__
+					  w _ITM_deregisterTMCloneTable
+					  w _ITM_registerTMCloneTable
+
+
+		- the code in the shared library gets loaded at runtime.  We cannot predict where it 
+		  will end up in memory, so it needs to be position independent.  This way the code
+		  will run correctly in memory no matter where it gets called.
+
+
+		- dynamic libraries can be stripped, but the stripping must occur after creating the
+		  dynamic library on the .so file.
+		- the .so file keeps the symbols in a special table called .dynsym which the strip command
+		  won't touch
+		
+
+
+4) Installing the dynamic library on the system
+
+	a) we must copy the library file to the correct place in the system
+
+	   - don't use cp for copy.  Use install to transfer ownership.
+	   - the common directory for user-installed libraries:   /usr/local/lib
+	   - we need to execute this as the root user so the library will be owned by root
+	   - it must be executable since it will be included and executed at runtime
+
+		$> sudo install -o root -g root -m 755 libconvert.so.1 /usr/local/lib/libconvert.so.1
+
+		(password = CS525)
+
+
+	b) run the ldconfig command to create the necessary links and update the cache
+
+		$> sudo ldconfig
+
+
+	c) change directory 
+
+		$> cd /usr/local/lib
+
+	d) run the ls command on libconvert* in /usr/local/lib to see if ldconfig created a
+	   symbolic link to our library file (without the version)
+
+		$> ls -og libconvert*
+
+		result:
+
+		lrwxrwxrwx 1 (datetime stamp) libconvert.so -> libconvert.so.1
+		-rwxr-xr-x 1 15864 (datetime stamp) libconvert.so.1
+
+
+	e) copy the header file to the system directory otherwise the user would have to 
+	   track this header file manually.  
+
+	   - user-installed header files are usually stored here:  /usr/local/include
+
+		$> sudo install -o root -g root -m 644 convert.h /usr/local/include/convert.h
+
+
+	f) just to be sure we are using the system files and not the files from our working directory:
+
+		$> rm libconvert.so.1 convert.h
+
+
+
+5) Using a dynamic library
+
+	a) open and review temperature2.c
+		-notice the change:   #include "convert.h" to #include <convert.h>
+
+	b) save and build the executable
+
+		- lconvert will link against the library
+		- all common system-wide directories are being searched for the library
+		- when using the -l option, leave out the lib part of the filename and the .so ending
+		- the linker figures this out on its own
+
+		$> gcc -Wall -Wextra -pedantic -std=c99 temperature2.c -o temperature2 -lconvert
+
+	c) execute:
+
+		$> ./temperature2 -f 34
+		$> ./temperature2 -k 21
+
+	d) we can verify which libraries are dynamically linked with the ldd command:
+
+		$> ldd temperature2
+
+		- you should see libconvert.so, libc, and vdso (virtual dynamic shared object)
+		- the vdso library exports a small set of often-used system calls to avoid 
+		  significant context switching which would impair performance
+
+
+
+6) compare!
+
+	a)  $> du -sh temperature
+
+		-note the size
+
+	b)  $> du -sh temperature2
+
+		-note the size

@@ -1,0 +1,19 @@
+
+
+#4:
+
+O_RDONLY = open for read only
+O_WRONLY = open for write only
+O_RDWR = open for reading and writing
+
+O_APPEND = place data at the end of the file
+O_TRUNC = set length of file to 0; discard existing contents
+O_CREAT = creates the file if needed 
+
+S_IRUSR = read permission, owner
+S_IWUSR = write permission, owner
+S_IXUSR = execute permission, owner
+
+S_IRGRP = read permission, group
+
+S_IROTH = read permission, other

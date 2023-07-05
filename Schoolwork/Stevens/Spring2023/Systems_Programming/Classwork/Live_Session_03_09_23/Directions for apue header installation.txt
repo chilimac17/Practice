@@ -1,0 +1,32 @@
+I had to play around a lot to get this to behave properly, but this ultimately worked for me:
+
+1.  Open Ubuntu.
+2.  $>   wget http://www.apuebook.com/src.3e.tar.gz 	 (Links to an external site.)         (download file)
+3.  $>   tar xzf src.3e.tar.gz                                                              (extract compressed file)
+4.  $>   cd apue.3e                                                                         (change directory)
+5.  $>   sudo apt-get install libbsd-dev                                                    (install:  password = CS525)
+6.  $>   make                                                                               (execute)
+7.  $>   cd include                                                                         (go to include directory)
+8.  $>   sudo cp apue.h /usr/include/apue.h                                           (copy apue.h to system include directory   password = CS525)
+
+Next we need to add the error.c file to the /usr/include directory:
+
+9. $> cd /home/systemsprog/apue.3e/lib   (cd ..)
+10. $> sudo cp error.c /usr/include/error.c
+
+Now, we need to modify the apue.h file to include the error.c file:
+
+11. $> cd /usr/include
+12. $> sudo joe apue.h
+13. You are now in the apue.h code.  At the very bottom, before the #endif /* _APUE_H */, insert a line and add this line of code:
+
+14.  #include "error.c"
+15.  save the file (CTRL+KD)
+
+ 
+
+Try opening a C program and add:
+
+#include "apue.h"
+
+see if the file will compile and execute properly.

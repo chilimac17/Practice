@@ -1,0 +1,37 @@
+Task 1:  Creating an orphan
+
+1. review orphan.c
+2. create executable and run
+3. ./orphan (do NOT press ENTER yet)       
+4. in a new terminal type:  pstree -A -p -s # (where # = Child PID #)
+        -  Note that the process has been forked which has created a child with the same content.
+5. Now to end the parent process:
+            a. return back to the 1st terminal where the program is executing
+            b. press ENTER
+6. Return back to the second terminal
+            a. run the same command as #4
+                - The child process has now been inherited by systemd since the parent has finished executing before the child.
+                - After 5 minutes, the child process will end.
+      
+
+Task #2:  Redirection of Input and Output between processes
+
+        1.  open and review upper.c (converts input to all caps from the command line)
+        2.  create executable
+        3.  ./upper
+            a. type in a sentence
+            b. type in numbers, special characters, letters...
+            c. press CTRL+D to stop
+        4.  open and review useupper.c (want to use upper.c within another program using a file as input)
+        5.  create executable
+        6.  ./useupper file.txt
+
+ 
+
+Task #3
+
+       Write a C program that will capture an integer division by zero signal.  When the signal is sent by a child process to the parent, have the parent display an appropriate message.
+       Hint:  consider the SIGFPE signal.  Which constant would you use for integer division by zero? (See page 353 in the textbook).  Test your program.
+
+       Then add an integer overflow signal to be sent by a child process to be captured by the parent process.  Display an appropriate message.
+       Hint:  you'll still use the SIGFPE signal, but which constant would signal integer overflow vs. floating-point overflow?

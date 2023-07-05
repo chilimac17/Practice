@@ -1,0 +1,188 @@
+SERVER:
+
+ ./NewServer
+HIT 1
+HIT 1.5
+HIT 2
+HIT 3
+Listener on port 8080 
+HIT 3.5
+Waiting for connections ...
+HIT 4
+HIT 5
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 7
+HIT 8
+New connection , socket fd is 4 , ip is : 127.0.0.1 , port : 41516 
+Welcome message sent successfully
+Adding to list of sockets as 0
+HIT 9
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 4
+HIT 5
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 7
+HIT 9
+HIT 10
+HIT 11
+HIT 13
+HIT 14
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 10
+HIT 4
+HIT 5
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+HIT 6
+
+
+Client:
+
+./SingleClient 
+Socket successfully created..
+connected to the server..
+Enter the string : yes
+From Server : ECHO Daemon v1.0 
+Enter the string : 
+
