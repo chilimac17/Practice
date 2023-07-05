@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Kirby
+comment1.params=
+comment1.target=int\ getUltraSword()
+comment2.params=newUltraSword
+comment2.target=void\ setUltraSword(int)
+comment3.params=sword
+comment3.target=void\ ultraSword(Smash)
+comment4.params=
+comment4.target=Kirby()
+numComments=5

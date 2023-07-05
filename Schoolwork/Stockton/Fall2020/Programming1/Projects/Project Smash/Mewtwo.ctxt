@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Mewtwo
+comment1.params=
+comment1.target=int\ getPsystrike()
+comment2.params=newPsystrike
+comment2.target=void\ setPsystrike(int)
+comment3.params=psych
+comment3.target=void\ Psystrike(Smash)
+comment4.params=
+comment4.target=Mewtwo()
+numComments=5

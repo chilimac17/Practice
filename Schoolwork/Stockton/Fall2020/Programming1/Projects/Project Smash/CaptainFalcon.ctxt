@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=CaptainFalcon
+comment1.params=
+comment1.target=int\ getBlueFalcon()
+comment2.params=newBlueFalcon
+comment2.target=void\ setBlueFalcon(int)
+comment3.params=blue
+comment3.target=void\ blueFalcon(Smash)
+comment4.params=
+comment4.target=CaptainFalcon()
+numComments=5
