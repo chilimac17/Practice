@@ -1,0 +1,11 @@
+1st Project Bundle Check List
+X Mean Median Mode STD Variance*
+X Permutation & combination
+X Union,Intersection, Compliment
+X tester for all above in one tester
+X CSV writer + output including histogram
+X monte hall gameshow
+X birthday program
+X 1-2 page paper explaining each submission 
+X 1st histogram in class 
+X screenshots of outputs
