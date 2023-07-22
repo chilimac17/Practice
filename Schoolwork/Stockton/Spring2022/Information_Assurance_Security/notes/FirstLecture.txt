@@ -1,0 +1,32 @@
+First Lecture 
+IAS
+Michael Chillemi
+
+What is information security? 
+	- To ensure confidentiality,integrity,avalibility
+
+The Security Problem 
+	Networks
+
+	People take advantage of enviorment to conduct fraud
+
+	Types of indivual who attacks a computer/network has evolved over 30 years 
+		- rise of non-affilated intruder(including scipt kiddies)
+	Examples of recent attacks 
+Reasons of successful attacks
+	- widespread vulnerabilities
+	-configuration issues
+	-poor designed software
+	-hardware limitations
+	-enterprise-based issues
+
+challneges if securing information 
+	- no simple solution
+	- many different types of attacks
+	- defending attacks can be difficult but not impossible 
+Understanding Security
+	-free from danger is the goal
+	-as security increased conviance decreased
+ 
+
+
