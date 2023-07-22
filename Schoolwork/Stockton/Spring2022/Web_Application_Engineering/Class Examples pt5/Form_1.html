@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sample Form 1</title>
+    </head>
+    <body bgcolor="gray">
+        <center><h1><font color = "green">User Register Form</font></h1></center>
+        <form>
+            Please Enter your Name: <input type = "text" name="uNames" size = "30" placeholder="Use Uppercase Letters">
+            <br>
+            Enter Password: <input type = "password" placeholder="Password" size = "30" name = "uPass">
+            <br>
+            <input type = "hidden" value="hidden msg" name="hiddenmsg">
+            <br>
+            Programming Languages You Know:
+            <br>
+            C++<input type="checkbox" name="cpp" value="cpp" checked>
+            Java<input type="checkbox" name="jv">
+            <br>
+            Your Nationality:
+            Citizen<input type="radio" value="C" name="cit"> 
+            <br>
+            non-Citizen<input type="radio" value="NC" name="cit">
+            <br>
+            Your domicle:
+            <select name="domicle">
+                <option value = "NY">New York</option>
+                <option value = "PY">Paris</option>
+                <option value = "LO">London</option>
+            </select>
+            <br>
+            Your Address:
+            <textarea rows="5" cols="30"></textarea>
+            <br>
+            Attach your CV:
+            <input type="file" name="CV">
+
+            <br>
+            <input type="Submit" value = "Register">
+            <input type="Reset" value="Reset">
+            <button type="submit" value="Save">Submit</button>
+        </form>
+    </body>
+</html>

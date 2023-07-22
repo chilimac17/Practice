@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+        <head>
+                <title>Image Slideshow</title>
+
+                <script>
+                       pics = new Array("P1.jpg", "p4.jpeg", "p5.jpg", "p6.jpg") 
+                       count = 0; picCount = pics.length;
+
+                       function npic() {
+
+                           count++;
+
+
+                           if(count < picCount) {
+
+                            document.getElementById("pic").src = pics[count]
+                           }
+                           else {
+                               count = 0
+
+                               document.getElementById("pic") = pics[count]
+                           }
+
+                       }
+
+                       function ppic() {
+
+                            count--;
+                            if(count > -1) {
+
+                                document.getElementById("pic").src = pics[count]
+                            }
+                            else {
+                                count = picCount - 1;
+                                document.getElementById("pic").src = pics[count]
+                            }
+                       }
+
+
+                </script>
+        </head>
+
+        <body>
+                <h1>Image Slideshow</h1>
+
+                <table>
+                        <tr>
+                            <td>
+                                <img src = "P1.jpg" id = "pic" border = "2" height = "400" width = "700">
+
+                           </td> 
+                        </tr>
+
+                        <tr>
+                             <td>
+                                 <img src = "Left.jpeg" height = "30" width = "40" align = "center" onclick = "ppic()">
+                                 <img src = "Right.jpeg" height = "30" width = "40" align = "center" onclick = "npic()">
+                             </td>   
+
+                        </tr>    
+
+                </table>
+
+        </body>
+
+</html>

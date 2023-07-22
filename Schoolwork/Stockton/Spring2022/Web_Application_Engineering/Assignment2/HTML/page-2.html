@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page 2</title>
+        <link href="../CSS/page-2.css" rel="stylesheet">
+    </head>
+    <body>
+        <table>  
+                <tr class="header">
+                    <td>
+                        <img src="../Sources/jobs.jpg" height="116" width="170">
+                        <h1 class="headerColor">Register to our job portal</h1>
+                    </td>
+                </tr>
+              
+                <tr class="form">
+                    
+                    <td>
+                        <form>
+                        <div>
+                            <label>Please enter your name: </label>
+                            <input type="text" name="name" placeholder="Specify first and last name" required>
+                        </div>
+                        <hr>
+                        <div>
+                            <label>Please enter your email: </label>
+                            <input type="email" name="email" placeholder="Should be vaild email id" required>
+                        </div>
+                        <hr>
+                        <div>
+                            <label>Please enter your password</label>
+                            <input type="password" name="password" placeholder="minimum of length 6" required>
+                        </div>
+                        <hr>
+                        <div>
+                            <label>Please enter your Telephone</label>
+                            <input type="phone" name="phone" placeholder="xxx-xxx-xxxx" required>
+                        </div>
+                        <hr>
+                        <div>
+                            <label>Which language do you know</label>
+                             <br>
+                            C++<input type="checkbox" name="c++">
+                            VB<input type="checkbox" name="vb">
+                            Java<input type="checkbox" name="java">
+                        </div>
+                        <hr>
+                        <div>
+                            <label>Your Gender?</label>
+                            <br>
+                            Male<input type="radio" name="gender" value="Male">
+                            Female<input type="radio" name="gender" value="Female">
+                        </div>
+                        <hr>
+                        <div>
+                            <label>Your DOB</label>
+                            <input type="date" name="dob" placeholder="mm/dd/yyyy" required>
+                            <label>Your Domicile</label><input type="text" list="domicle" required>
+                            <datalist id="domicle">
+                                <option>New York</option>
+                                <option>Paris</option>
+                                <option>London</option>
+                            </datalist>
+                        </div>
+                        <hr>
+                        <div>
+                            <label>Your Address</label>
+                            <br>
+                        <textarea placeholder="Your perminate address"></textarea>
+                        </div>
+                        <hr>
+                        <div>
+                            <label>Attach your CV:</label>
+                            <input type="file" name="CV">
+                            <br>
+                            <input type="Submit" value = "Register">
+                            <input type="Reset" value="Fill Again">
+                        </div>
+                    </form>
+                    </td>
+                    
+                </tr>
+                <tr class="footer">
+                    <td>
+                    &copy;All rights reserved
+                    </td>
+                </tr>
+            
+        </table>
+    </body>
+</html>

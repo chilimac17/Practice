@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image Preview</title>
+        <script>
+            function changeThePic(imgSrc){
+                document.getElementById("pic").src = imgSrc;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Image Preview</h1>
+        <table width="700" align="center">
+            <tr>
+                <td>
+                    <img src="../Sources/Draw-Mountains.png" id="pic" border="2" height="400" width="700">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="../Sources/apple.png" height="100" width="100" border="2" onclick="changeThePic('../Sources/apple.png')">
+                    <img src="../Sources/athletics-s-logo.png" height="100" width="100" border="2" onclick="changeThePic('../Sources/athletics-s-logo.png')">
+                    <img src="../Sources/google.jpg" height="100" width="100" border="2" onclick="changeThePic('../Sources/google.jpg')">
+                    <img src="../Sources/mountains1.jpg" height="100" width="100" border="2" onclick="changeThePic('../Sources/mountains1.jpg')">
+                    <img src="../Sources/Draw-Mountains.png" height="100" width="100" border="2" onclick="changeThePic('../Sources/Draw-Mountains.png')">
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

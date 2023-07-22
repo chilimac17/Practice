@@ -1,0 +1,29 @@
+div.topDiv{
+    background-color: grey;
+    width: 100%;
+    height: 300px;
+}
+div.header{
+    text-align: center;
+    
+}
+div.underHeader{
+    background-color: green;
+    width: 100%;
+    height: 1089px;
+    
+}
+input.readme{
+    color: white;
+    background-color: blue;
+}
+input.playgame{
+    color: black;
+    background-color: yellow;
+    border: 1 solid black;
+    margin-top: 50px;
+}
+h3.tablepage{
+    text-align: center;
+    font-weight: bold;
+}

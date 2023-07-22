@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            HTML Form
+        </title>
+    </head>
+    <body bgcolor="grey"> 
+        <form name="ourForm">
+            <hr>
+            <h3>What is your name?</h3>
+            <input type="text" name="Name" value="CSCI-4135 Student">
+            <hr>
+            <h3>IS CSCI-4135 enjoyable?</h3>
+            <input type="radio" name="enjoyment" value="yes">yes
+            <input type="radio" name="enjoyment" value="sometimes" checked>sometimes
+            <input type="radio" name="enjoyment" value="not_Really">Not Really 
+            <hr>
+            <h3>Why are you taking CSCI-4135?</h3>
+            <input type="checkbox" name="fun" value="fun" checked>For fun
+            <input type ="checkbox" name="minor" value="minor"> To get a CS Minor
+            <input type="checkbox" name="credit" value="credit"> To earn course credit
+            <input type="checkbox" name="none" value="none">Dont Know
+            <hr>
+            <h3>What is your classification</h3>
+                <select name="class" size="4" multiple>
+                    <option>Freshman</option>
+                    <option>Sophomore</option>
+                    <option>Junior</option>
+                    <option>Senior</option>
+                    <option selected>Other</option>
+                </select>
+            <hr>
+            <h3>What do you like most about CSCI-4135</h3>
+                <textarea name="display" rows="2" cols="50">Web designing is great!</textarea>
+            <hr>
+            <input type="submit" value="send">
+            <input type="reset" value="reset">
+        </form>
+    </body>
+</html>

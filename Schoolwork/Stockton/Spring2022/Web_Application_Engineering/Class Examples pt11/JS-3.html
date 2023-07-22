@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Confirm box</title>
+        <script>
+            function confirmName(){
+                var name = prompt("Please enter your name:");
+                if(confirm("Write on the webpage?")){
+                    document.write("Welcome " + name);
+                }else{
+                    document.write("Welcome Mr.Anonymous");
+                }
+            }
+            confirmName();
+        </script>
+    </head>
+    <body>
+        <h1>Testing confirm box</h1>
+    </body>
+</html>

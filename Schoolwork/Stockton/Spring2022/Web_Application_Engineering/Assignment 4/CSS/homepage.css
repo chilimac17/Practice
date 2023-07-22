@@ -1,0 +1,42 @@
+div.container1{
+    width: auto;
+    height: auto;
+}
+table.slide{
+    display: flex;
+    justify-content: center;
+}
+td.mid{
+    display: flex;
+    justify-content: center;
+}
+div.welcomeBox{
+    background-color: lightgray;
+    width: 2000px;
+    height: 400px;
+    margin: auto;
+    margin-top: 80px;
+    text-align: center;
+    position: relative;
+}
+div.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+input.readMore{
+    background-color: forestgreen;
+    color: white;
+}
+p.wwyltd{
+    margin-left: 280px;
+}
+select.selectBar{
+    margin-left: 280px;
+    width: 2000px;
+}
+input.submitButton{
+    margin-left: 280px;
+    margin-top: 10px;
+}

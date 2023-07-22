@@ -1,0 +1,29 @@
+a {
+    font-family: calibri;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+a:link {
+
+    color:red
+}
+
+a:visited {
+
+    color:yellow
+}
+
+a:hover {
+
+    background-color: gray;
+    text-decoration: underline;
+}
+
+body {
+
+    background-color: bisque;
+    background-image: url("stockton.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+}

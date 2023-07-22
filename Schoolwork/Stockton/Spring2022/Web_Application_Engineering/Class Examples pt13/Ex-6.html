@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+        <head>
+                <title>Form objects</title>
+
+                <script>
+                        function ver() {
+
+                            var cur, pre, ut, bill;
+                            pre = form1.elements[0].value;
+                            cur = form1.elements[1].value;
+
+                            form1.elements[2].value = cur - pre;
+                            form1.elements[3].value = form1.elements[2].value * 5;
+
+                        }
+
+                </script>
+        </head>
+
+        <body>
+                <form name = "form1">
+
+                    <label>Previous Reading:</label>
+                    <input type = "text" name = "currRead" size = 30>
+                    <br>
+                    <label>Current Reading:</label>
+                    <input type = "text" size = 30 onchange = "ver()">
+                    <br>
+                    <label>Usage</label>
+                    <input type = "text" size = 30>
+                    <br>
+                    <label>Billed Amount</label>
+                    <input type = "text" size = 30>
+                    <br>
+                    <input type = "submit" name = "submit">
+
+                </form>
+
+        </body>
+
+</html>

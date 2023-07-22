@@ -1,0 +1,18 @@
+h1{
+    font-family: Arial;
+    font-size: 36px;
+}
+
+h1.title{
+    color: orange;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+h1.bodytext{
+    color: purple;
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+

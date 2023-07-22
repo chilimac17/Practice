@@ -1,0 +1,43 @@
+h1.shop{
+    text-align: center;
+}
+
+h1.movie{
+    color: white;
+    text-align: center;
+}
+
+h1.flight{
+    color: gray;
+    text-align: center;
+}
+
+h2.heading{
+    color: white;
+}
+
+h3.shop{
+    color: gray;
+}
+
+h3.movie{
+    color: orange;
+}
+
+h3.flight{
+    color: yellow;
+}
+
+p.center{
+    text-align: center;
+}
+
+p.movie{
+    text-align: center;
+    color: yellow;
+}
+
+p.flight{
+    color: green;
+    text-align: center;
+}

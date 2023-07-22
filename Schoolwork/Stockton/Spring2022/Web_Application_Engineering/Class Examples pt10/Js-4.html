@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript - 4</title>
+        <script>
+            function playGame(){
+                //Math.random() will give you a random number 0 -1 
+                // Math.random() * 10 
+                //multiplies it by 10 to change the range 0-9
+                //use parseInt to convert to a int 
+                var res = parseInt(Math.random() * 10);
+                var num = prompt("Please enter a number: ",0);
+                if(num == res){
+                    document.write("You won the game");
+                }else{
+                    document.write("You lost the game. Correct answer: ", res);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h3 onclick="playGame()">Play the Game click me</h3>
+    </body>
+</html>

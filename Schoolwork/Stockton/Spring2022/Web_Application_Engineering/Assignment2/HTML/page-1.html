@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Problem 1</title>
+        <link href="../CSS/page-1.css" rel="stylesheet">
+    </head>
+    <body>
+        <!--div for row, inside div make another div with the lable and inside 2nd div add input tag-->
+        <div>
+            <h1 class="pageHeader">User Registration</h1>
+            <div>
+                <p>Please complete the following form to register with our site:</p>
+            </div>
+            <div>
+               <table>
+                    <form>
+                        <tr>
+                            <td>
+                                <label>User Name:</label>
+                            </td>
+                            <td>
+                                <input type="text" name="userName" placeholder="username" required>
+                            </td>
+                        </tr>
+                        <tr>
+                           <td>
+                                <label>Password:</label>
+                           </td>
+                           <td>
+                                <input type="password" name="password" placeholder="password" required>
+                           </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Gender:</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="gender" value="Male">Male
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+            
+                            </td>
+                            <td>
+                                <input type="radio" name="gender" value="Female">Female
+                            </td>
+                        </tr>
+                        <tr>
+                           <td>
+                            <label>How did you hear about us:</label>
+                           </td>
+                           <td>
+                            <select name="ref">
+                                <option value = "sa">Select Answer</option>
+                                <option value = "aw">Another Website</option>
+                                <option value = "ma">Magazine Ad</option>
+                                <option value = "ff">From a Friend</option>
+                                <option value = "o">Other</option>
+                            </select>
+                           </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Please select this box if you wish to be added to our mailing list. 
+                                    We will not pass on your deatils to any third party 
+                                </label>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="mailList">
+                            </td>
+                        </tr>
+                        <tr>
+                           <td>
+                           
+                           </td>
+                           <td>
+                            <button type="submit">Register</button>
+                           </td>
+                        </tr>
+                    </form>
+               </table>
+            </div>
+        </div>
+    </body>
+</html>

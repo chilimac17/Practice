@@ -1,0 +1,36 @@
+table{
+    height:100%;
+    width:100%;
+}
+table,td{
+    border-style: double;
+    border-width: 1px;
+}
+
+.header{
+    background: grey;
+    height: 10%;  
+    text-align: center;   
+}
+
+.logo{
+    float: left;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+}
+.form{
+    background-color: pink;
+    height: 100%; 
+}
+
+.footer{
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+    height: 5%;
+    background-color: lightblue;
+}
+h1.headerColor{
+    color: green;
+}

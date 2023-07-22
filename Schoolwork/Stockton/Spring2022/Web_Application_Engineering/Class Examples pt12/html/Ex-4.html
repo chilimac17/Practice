@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>Image rollover</title>
+        <script>
+            function changePic(imgsrc){
+                document.getElementById('pic').src =imgsrc;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Image Rollover</h1>
+        <img src="../Sources/Draw-Mountains.png" id="pic" onmousemove="changePic('../Sources/mountains1.jpg')" 
+            onmouseout="changePic('../Sources/Draw-Mountains.png')" width="150">
+    </body>
+</html>

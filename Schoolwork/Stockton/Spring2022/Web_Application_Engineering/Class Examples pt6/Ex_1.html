@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Testing the requried attribute
+        </title>
+    </head>
+    <body bgcolor="lightblue">
+
+        <h1>User Registration Form</h1>
+
+        <form>
+            Please enter your name:<input type="text" placeholder="lowercase only" pattern="[a-z]{1,20}" required>
+            <br>
+            We are at: <input type="text" placeholder="Stockton Campus" disabled>
+            <br>
+            <input type="text" value="This is a read only text" readonly>
+            <br>
+            Favorite Color: <input type="text" list="colors">
+                                <datalist id="colors">
+                                    <option>Red</option>
+                                    <option>Blue</option>
+                                    <option>Green</option>
+                                </datalist>
+            <br>
+            Email: <input type="email" placeholder="Email">
+            <br>
+            Your DOB: <input type="date" name="DOB">
+            <br>
+            Enter a number: <input type="number" name="number">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>

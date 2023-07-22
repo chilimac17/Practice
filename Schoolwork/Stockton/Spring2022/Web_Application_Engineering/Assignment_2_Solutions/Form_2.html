@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<body>
+<table border = 1 height = 100% width = 100% align = center>
+<tr height = 15%>
+<td colspan = 2 bgcolor = lightgray align = center>
+<img src = 'jobs.jpg' height = 25% width = 10% align = left> 
+<font face = verdana color = "green" size = 7 align = left>
+<b>Register to our job portal</b>
+</td>
+</tr>
+<tr height = 80%>
+<td bgcolor = pink>
+<form>
+<font face = verdana color = purple><b>Please Enter your name: </b></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" size = 40 placeholder = "Specify first name and lastname", required><br>
+<hr>
+<font face = verdana color = purple><b>Please Enter your Email: </b></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "email" size = 40 placeholder = "Should be a valid email id", required><br>
+<hr>
+<font face = verdana color = purple><b>Please Enter your password: </b></font>&nbsp;&nbsp;&nbsp;<input type = "password" size = 30 placeholder = "minimum of length 6", required>
+<input type = "hidden" value = "Alice" name = "name">
+<br>
+<hr>
+<font face = verdana color = purple><b>Please Enter your Telephone: </b></font>&nbsp;&nbsp;&nbsp;<input type = "text" size = 30 pattern = "[0-9]{3}[-][0-9]{3}[-][0-9]{4}" placeholder = "xxx-xxx-xxxx", required>
+</font>
+<hr>
+<font face = verdana color = purple>
+<b>
+Which language do you know?
+</b>
+</font>
+<br>
+C++ <input type = "checkbox" value = C name = C checked>
+VB <input type = "checkbox" value = VB name = VB>
+Java <input type = "checkbox" value = Java name = Java>
+<br>
+<hr>
+<font face = verdana color = purple>
+<b>Your Gender?</b>
+</font>
+<br>
+Male<input type = "radio" value = "M" name = "Gender" checked> 
+Female<input type = "radio" value = "F" name = "Gender">
+<br>
+<hr>
+<font face = verdana color = purple>
+<b>Your DOB:</b>
+</font>
+<input type = "date" name = "DOB">
+<font face = verdana color = purple>
+&nbsp;&nbsp;
+<b>
+Your domicile:
+</b>
+</font>
+<input type = “text” list = “domicile”>
+		<datalist id = “domicile”>
+			<option>London</option>
+			<option>Paris</option>
+			<option>New York</option>
+		</datalist>
+<br>
+<hr>
+<font face = verdana color = purple>
+<b>Your address:</b>
+</font>
+<br>
+<textarea rows = 5 cols = 30 placeholder = "Your permanent address">
+</textarea> 	 
+<br>
+<hr>
+<font face = verdana color = purple>
+<b>Attach your CV: </b></font><input type = "file" name = "CV">
+<br>
+<input type = Submit Value = "Register">
+<input type = Reset Value = "Fill Again">	
+</form>
+</td>
+</tr>
+<tr height = 5%>
+<td colspan = 2% bgcolor = lightblue align = center><font face = verdana><b>&copy;all rights reserved		</b></font></td> 	
+</tr>
+</table>
+</body>
+</html>

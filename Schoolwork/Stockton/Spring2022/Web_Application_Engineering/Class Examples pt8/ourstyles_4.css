@@ -1,0 +1,24 @@
+table {
+
+    border-style:dashed;
+    border: 10px;
+    width: 300px;
+}
+
+th {
+
+    font-family: calibri;
+    background-color: gray;
+}
+
+td {
+        background-color: lightblue;
+        vertical-align: top;
+
+}
+
+tr {
+
+        height:50px;
+}
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+        <head>
+                <title>History object</title>
+
+                <script>
+                        document.write(history.length);
+
+                        function goBack() {
+
+                            window.history.back();
+                        }
+
+                        function goForward() {
+
+                            window.history.forward();
+                        }
+
+                </script>
+        </head>
+
+        <body>
+                <h1>This is the third HTML page</h1>
+                
+                <input type = "button" value = "Go back" onclick="goBack()">
+                <input type = "button" value = "Go Forward" onclick="goForward()">
+
+        </body>
+
+</html>

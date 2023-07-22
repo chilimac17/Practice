@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Accessing element attributes</title>
+        <script>
+            function getAttr(){
+                var a = document.getElementById("pic");
+                alert(a.getAttribute('title'));
+            }
+        </script>
+    </head>
+    <body>
+        <img src="Sources/mountains1.jpg" id="pic" height="500" title="Mountains" onclick="getAttr()">
+
+    </body>
+</html>

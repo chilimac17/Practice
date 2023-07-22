@@ -1,0 +1,42 @@
+Michael chillemi
+First Day notes 
+
+CSCI 4135
+Today:
+(Find all this information in syllabus)
+	1. Course Introduction
+	2. An introduction to webapplication engineering 
+
+1. Course Introduction
+	There are two modules: 
+	Module 1(web engineering methods and techniques)
+		- learning the software engineering principalsfor development
+		for development of web applications
+	Topics: Web Application Development approaches
+		- process models
+		-web project management
+	Project development
+		- requirment engineering
+		-web application modeling
+		-web application architectures
+		- technologies and tools
+		- maintenance of web applications
+	Quality aspects
+		- web security
+	Module 2(web application development)
+	client side technologies
+		-hyper text makeup languages(HTML)
+		-cascading style sheet(css)
+		-bootstrap
+		-angular
+		-javascript
+	Sever side technologies
+		-PHP
+		-MySQL
+	Textbooks:
+		-web engineering by kapel, John wiley & sons
+		-beginning html, xhtml, css and javascript, by John Duckett, wiley publishing
+		-learn javascipt by chuck easttom
+		-beginning PHP programming by Matt Doyle 
+NOTES Day 1
+

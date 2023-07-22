@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+        <head>
+                <title>Digital Clock</title>
+
+            <script>
+                    function startTime() {
+    
+                        var today = new Date();
+    
+                        var h = today.getHours();
+                        var m = today.getMinutes();
+                        var s = today.getSeconds();
+    
+                        h = checkTime(h);
+                        m = checkTime(m);
+                        s = checkTime(s);
+
+                        document.getElementById('txt').innerHTML = h+":"+m+":"+s;
+                        var t = setTimeout(function() {startTime()}, 500);
+                        
+                        
+                    }
+    
+                    function checkTime(i) {
+    
+                        if(i < 10) {
+                            i = "0" + i;
+                            
+                        }
+                        return i;
+                        
+    
+                    }
+    
+            </script>
+        </head>
+
+        <body onload = "startTime()"><div style = "color:blueviolet"><h1 id = "txt"></h1></div></body>    
+
+</html>

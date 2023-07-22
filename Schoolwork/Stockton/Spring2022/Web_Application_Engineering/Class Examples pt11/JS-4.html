@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Retrieving image attributes</title>
+        <script>
+            function getValue(){
+                var a = document.getElementById("pic");
+                alert(a.title);
+                alert(a.height);
+            }
+        </script>
+    </head>
+    <body>
+        <img src="Sources/mountains1.jpg" id="pic" height="500" title="Mountains" onclick="getValue()">
+    </body>
+</html>
